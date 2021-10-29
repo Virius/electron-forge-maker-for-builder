@@ -1,0 +1,21 @@
+{
+  "name": "electron-forge-maker-for-builder",
+  "version": "0.0.6",
+  "description": "custom electron-forge maker for electron-builder target",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravil Giniyatullin",
+  "license": "MIT",
+  "dependencies": {
+    "@electron-forge/maker-base": "^6.0.0-beta.61",
+    "@electron-forge/shared-types": "^6.0.0-beta.61",
+    "app-builder-lib": "^22.14.5"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
