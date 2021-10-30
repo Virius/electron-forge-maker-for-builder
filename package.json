@@ -3,9 +3,14 @@
   "version": "0.0.6",
   "description": "custom electron-forge maker for electron-builder target",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
+    "format": "prettier --write \"*.ts\"",
+    "lint": "eslint --ext .ts,.tsx .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ravil Giniyatullin",
@@ -16,6 +21,11 @@
     "app-builder-lib": "^22.14.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.4.1",
     "typescript": "^4.4.4"
   }
 }
