@@ -2,6 +2,8 @@ import MakerBase, { MakerOptions } from '@electron-forge/maker-base';
 import { ForgePlatform } from '@electron-forge/shared-types';
 import { buildForge } from 'app-builder-lib';
 import path from 'path';
+import fs from 'fs';
+import fsPromises from 'fs/promises';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface BuilderTargetConfig {}
@@ -26,7 +28,12 @@ class MakerBuilderTarget extends MakerBase<BuilderTargetConfig> {
     async make(opts: MakerOptions): Promise<string[]> {
         const builderTarget: string = platformToBuilderTargetMap[opts.targetPlatform];
         const result = await buildForge(opts, { win: [`${builderTarget}:${opts.targetArch}`] });
-        result.push(path.join(opts.makeDir, `${builderTarget}/latest.yml`));
+        const metaFilePath = path.join(opts.makeDir, `${builderTarget}/latest.yml`);
+        const archMetaFilePath = path.join(opts.makeDir, `${builderTarget}/latest-${opts.targetArch}.yml`);
+        if (fs.existsSync(metaFilePath)) {
+            await fsPromises.rename(metaFilePath, archMetaFilePath);
+            result.push(archMetaFilePath);
+        }
         return result;
     }
 }
