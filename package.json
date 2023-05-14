@@ -1,6 +1,6 @@
 {
   "name": "electron-forge-maker-for-builder",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "custom electron-forge maker for electron-builder target",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,9 +16,9 @@
   "author": "Ravil Giniyatullin",
   "license": "MIT",
   "dependencies": {
-    "@electron-forge/maker-base": "^6.0.0-beta.61",
-    "@electron-forge/shared-types": "^6.0.0-beta.61",
-    "app-builder-lib": "^22.14.5"
+    "@electron-forge/maker-base": "^6.1.1",
+    "@electron-forge/shared-types": "^6.1.1",
+    "app-builder-lib": "^24.4.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.2.0",
@@ -26,6 +26,6 @@
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.4"
   }
 }
