@@ -1,6 +1,6 @@
 {
   "name": "electron-forge-maker-for-builder",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "custom electron-forge maker for electron-builder target",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,8 +16,8 @@
   "author": "Ravil Giniyatullin",
   "license": "MIT",
   "dependencies": {
-    "@electron-forge/maker-base": "^6.1.1",
-    "@electron-forge/shared-types": "^6.1.1",
+    "@electron-forge/maker-base": "^6.4.2",
+    "@electron-forge/shared-types": "^6.4.2",
     "app-builder-lib": "^24.4.0"
   },
   "devDependencies": {
